@@ -1,0 +1,63 @@
+.img-width {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .cardBox {
+    padding: 20px 20px 30px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .cardBox:hover {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border: 1px solid #e9e9eb;
+  }
+  .grey-color {
+    font-size: 13px;
+    font-weight: 400;
+    color: #686b78;
+  }
+  .list-styling {
+    text-decoration: none;
+    color: black;
+    text-decoration: solid;
+  }
+  .card-rating-cost {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rounded{
+    border-radius: 50%;
+  }
+  .small-font {
+    font-size: 12px;
+    font-weight: 400;
+    color: #535665;
+  }
+  .dot{
+    font-size: 1.5rem;
+  }
+  .green{
+    background-color: green;
+    color: white;
+    padding: 5px;
+  }
+  .orange{
+    background-color: #db7c38;
+    color: white;
+    padding: 5px;
+  }
+  .cards{
+    display: grid;
+    border: 1px solid rgb(226, 226, 231);
+    transition: all 0.05s ease 0s;
+    cursor: pointer;
+    gap: 12px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 20px;
+  }

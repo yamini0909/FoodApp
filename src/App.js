@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Header from "./components/Header/Header"
+import About from './components/About'
+import Contact from "./components/Contact"
+import Body from './components/Body/Body'
+import Menupage from './components/MenuPage'
+import {Routes, Route} from "react-router-dom"
+import { Provider } from 'react-redux';
+import 'tailwindcss/tailwind.css'
+
+import "./index.css"
+import './custom.css'
+import appStore from './utilis/appStore';
+import Cart from './components/Cart';
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Provider store={appStore}>
+  <div className="App">
+         <Header style={{textDecoration: 'none'}}/>
+      <Routes>
+        <Route className='link-styling' path="/" element={<Body/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/contact" element={<Contact/>}></Route>
+        <Route path="/cart" element={<Cart/>}></Route>
+        <Route className='link-styling' path="/menu/:resId" element={<Menupage/>}></Route>
+      </Routes> 
     </div>
+    </Provider>
+  
   );
 }
 
